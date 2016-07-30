@@ -62,7 +62,7 @@ describe "Song Class Methods" do
       song = Song.new_from_filename("Thundercat - For Love I Come.mp3")
 
       expect(song.name).to eq("For Love I Come")
-      expect(song.artist_name).to eq("Thundercat")
+      expect(song.name_of_artist).to eq("Thundercat")
     end
   end
 
@@ -71,7 +71,7 @@ describe "Song Class Methods" do
       song = Song.create_from_filename("Thundercat - For Love I Come.mp3")
       song_match = Song.find_by_name("For Love I Come")
       expect(song_match.name).to eq("For Love I Come")
-      expect(song_match.artist_name).to eq("Thundercat")
+      expect(song_match.name_of_artist).to eq("Thundercat")
     end
   end
 
